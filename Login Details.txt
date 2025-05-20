@@ -1,0 +1,25 @@
+Login Details
+superadmin@gmail.com
+admin
+
+hotel@gmail.com
+hotel
+
+hotel2@gmail.com
+hotel
+
+hotel3@gmail.com
+hotel
+
+hotel4@gmail.com
+hotel
+
+hotel5@gmail.com
+hotel
+
+hotel6@gmail.com
+hotel
+
+user@gmail.com
+users
+
