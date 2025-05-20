@@ -1,10 +1,5 @@
-### E-R Diagram for the application
-
-![ER Diagram](./database/Er Diagram.png)
-
----
-This is hotel booking and management system with three different roles: **User**, **Hotel Admin**, and **Super Admin**. The system includes room bookings, hotel management, user reviews, role-based access control (RBAC),JWT Authentication.
-Users can explore **various travel destinations (places)**, view associated **hotels and room listings**, and **book rooms** in those hotels. After a stay, users can also **leave reviews** and **cancel bookings** if needed.
+This is hotel booking and management system with three different roles: **User**, **Hotel Admin**, and **Super Admin**. The system includes room bookings, hotel management, user reviews, role-based access control (RBAC), JWT Authentication.
+Users can explore **various travel destinations**, view associated **hotels and room listings**, and **book rooms** in those hotels. After a stay, users can also **leave reviews** and **cancel bookings** if needed.
 
 ###  Current Features:
 
@@ -16,14 +11,12 @@ Users can explore **various travel destinations (places)**, view associated **ho
 - **Booking Cancellation**: Cancel their own bookings.
 
 ####  Hotel Admin
-
 - **Hotel Management**: Edit hotel information, add new hotel packages.
 - **Room Management**: Add new rooms with photos, manage room details.
 - **Booking Management**: View all bookings, approve or cancel them.
 - **Review Management**: View all reviews related to their hotels and rooms.
 
 #### Super Admin
-
 - **User & Admin Control**: View, manage, and delete any user or hotel admin.
 - **Role Management**: Change roles of users (e.g., Change user role to hotel admin).
 - **Booking Oversight**: View all bookings in the system.
@@ -46,8 +39,8 @@ git clone https://github.com/Meelanlama/GhumGham_Travels_backend.git
 ```bash
 CREATE DATABASE travels;
 ```
-**Change MySQL username and password as per your credentials**
-**Download the sql file from /database and import it**
+- Change MySQL username and password as per your credentials
+- Download the SQL file from /database folder and import it
 
 ---
 
@@ -80,19 +73,17 @@ CREATE DATABASE travels;
 | GET    | `/user/logged/in`            | Get currently logged-in user |
 | GET    | `/user/all`                  | Get all users                |
 
----
 ### Hotel Management
 
-|Method|URL|Description|
-|---|---|---|
-|GET|`/hotel`|Get hotel of logged-in hotel admin|
-|POST|`/hotel`|Create or update hotel info|
-|GET|`/hotel/logged/user`|Get hotel for current user|
-|GET|`/hotel/get/by/id/{id}`|Get hotel by ID|
-|GET|`/hotel/all`|Get all hotels|
-|DELETE|`/hotel/delete`|Delete a hotel|
+|Method|URL| Description                        |
+|---|---|------------------------------------|
+|GET|`/hotel`| Get hotel of logged-in hotel admin |
+|POST|`/hotel`| Create or Update hotel info        |
+|GET|`/hotel/logged/user`| Get hotel for current user         |
+|GET|`/hotel/get/by/id/{id}`| Get hotel by ID                    |
+|GET|`/hotel/all`| Get all hotels                     |
+|DELETE|`/hotel/delete`| Delete a hotel                     |
 
----
 ###  Hotel Packages
 
 | Method | URL               | Description                                      |
@@ -101,7 +92,6 @@ CREATE DATABASE travels;
 | GET    | `/package/hotel`  | Get packages of current hotel admin              |
 | GET    | `/package/delete` | Delete a hotel package                           |
 
----
 ###  Hotel Reviews
 
 |Method|URL|Description|
@@ -110,7 +100,6 @@ CREATE DATABASE travels;
 |GET|`/hotel/review/by/hotel`|Get reviews for a hotel|
 |DELETE|`/hotel/review/delete`|Delete a hotel review|
 
----
 ###  Package Booking
 
 | Method | URL                              | Description                               |
@@ -122,7 +111,6 @@ CREATE DATABASE travels;
 | GET    | `/package/booking/by/package`    | Get all bookings for a specific package   |
 | GET    | `/package/booking/all`           | Get all package bookings                  |
 
----
 ### Room Management
 
 | Method | URL                   | Description                          |
@@ -134,12 +122,11 @@ CREATE DATABASE travels;
 | GET    | `/room/all`           | Get all rooms                        |
 | DELETE | `/room/delete`        | Delete a room                        |
 
----
 ###  Room Booking
 
 | Method | URL                           | Description                                  |
-| ------ | ----------------------------- | -------------------------------------------- |
-| PUT    | `/room/booking/change/status` | Change room booking status (approve/cancel)  |
+| ------ | ----------------------------- |----------------------------------------------|
+| PUT    | `/room/booking/change/status` | Change room booking status (Approve/Cancel)  |
 | POST   | `/room/booking`               | Book a room                                  |
 | GET    | `/room/booking/{id}`          | Get booking details by ID                    |
 | GET    | `/room/booking/user`          | Get all bookings of current user             |
@@ -147,7 +134,6 @@ CREATE DATABASE travels;
 | GET    | `/room/booking/by/room`       | Get bookings for a specific room             |
 | GET    | `/room/booking/all`           | Get all room bookings                        |
 
----
 ###  Room Reviews
 
 | Method | URL                    | Description                     |
@@ -156,17 +142,15 @@ CREATE DATABASE travels;
 | GET    | `/room/review/by/room` | Get reviews for a specific room |
 | DELETE | `/room/review/delete`  | Delete a room review            |
 
----
 ### Places
 
-|Method|URL|Description|
-|---|---|---|
-|GET|`/places`|Get all places|
-|POST|`/places`|Add a new place|
-|GET|`/places/id/{id}`|Get place details by ID|
-|DELETE|`/places/delete`|Delete a place|
+|Method|URL| Description             |
+|---|---|-------------------------|
+|GET|`/places`| Get all travel places   |
+|POST|`/places`| Add a new travel place  |
+|GET|`/places/id/{id}`| Get place details by ID |
+|DELETE|`/places/delete`| Delete a place          |
 
----
 ###  Security & Login
 
 |Method|URL|Description|
@@ -175,10 +159,9 @@ CREATE DATABASE travels;
 |GET|`/login/loggedinuser`|Get details of logged-in user|
 |GET|`/login/check`|Check if session is active|
 
----
-### Photo Gallery
+### Photo Gallery of travel places
 
-|Method|URL|Description|
-|---|---|---|
-|GET|`/gallery`|View gallery images|
-|DELETE|`/gallery/delete`|Delete image from gallery|
+|Method|URL| Description                   |
+|---|---|-------------------------------|
+|GET|`/gallery`| View gallery images of places |
+|DELETE|`/gallery/delete`| Delete image from gallery     |
